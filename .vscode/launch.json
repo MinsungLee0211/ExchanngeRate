@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch control",
+            "request": "launch",
+            "mainClass": "control",
+            "projectName": "ExchanngeRate_af17e813"
+        },
+        {
+            "type": "java",
             "name": "Launch parsing",
             "request": "launch",
             "mainClass": "parsing",
