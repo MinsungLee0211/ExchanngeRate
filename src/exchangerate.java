@@ -1,4 +1,4 @@
-//api layer 예시 코드 (Java 조회 코드)
+// api layer 예시 코드 (Java 조회 코드)
 
 import java.io.*;
 import okhttp3.*;   
@@ -17,5 +17,10 @@ public class exchangerate {
       .build();
     Response response = client.newCall(request).execute();
     System.out.println(response.body().string());
+
+    // google gson
+  }
+
+  public static void forName(String jdbcDriver) {
   }
 }
