@@ -5,6 +5,7 @@ import okhttp3.*;
 
 
 public class exchangerate {
+
   private static final RequestBody RequestBody = null;
 
   public static void main(String []args) throws IOException{
@@ -16,11 +17,7 @@ public class exchangerate {
       .method("GET", RequestBody) 
       .build();
     Response response = client.newCall(request).execute();
-    System.out.println(response.body().string());
+    System.out.println(response.body().string()); 
 
-    // google gson
-  }
-
-  public static void forName(String jdbcDriver) {
   }
 }
