@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch pp",
+            "request": "launch",
+            "mainClass": "pp",
+            "projectName": "ExchanngeRate_af17e813"
+        },
+        {
+            "type": "java",
+            "name": "Launch testparsing",
+            "request": "launch",
+            "mainClass": "testparsing",
+            "projectName": "ExchanngeRate_af17e813"
+        },
+        {
+            "type": "java",
+            "name": "Launch Cont",
+            "request": "launch",
+            "mainClass": "Cont",
+            "projectName": "ExchanngeRate_af17e813"
+        },
+        {
+            "type": "java",
+            "name": "Launch test",
+            "request": "launch",
+            "mainClass": "test",
+            "projectName": "ExchanngeRate_af17e813"
+        },
+        {
+            "type": "java",
+            "name": "Launch parse",
+            "request": "launch",
+            "mainClass": "parse",
+            "projectName": "ExchanngeRate_af17e813"
+        },
+        {
+            "type": "java",
             "name": "Launch control",
             "request": "launch",
             "mainClass": "control",

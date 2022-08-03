@@ -13,7 +13,7 @@ public class exchangerate {
 
     Request request = new Request.Builder()
       .url("https://api.apilayer.com/exchangerates_data/latest?symbols=GBP%2CJPY%2CEUR&base=USD")
-      .addHeader("apikey", "tUxsDwwjT72GgMLoJRprXlqc34wmOzX4")
+      .addHeader("apikey", "vTZsRtVEHw42GEOvnAZWMtLB4cJVFQt9")
       .method("GET", RequestBody) 
       .build();
     Response response = client.newCall(request).execute();
