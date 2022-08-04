@@ -1,26 +1,27 @@
-import java.sql.Statement;         
-import java.sql.Connection;                                  
-import java.sql.DriverManager;                                     
-import java.sql.SQLException;                         
-                       
-                                                      
-/*데이터베이스에 접속하여 조작에 관한 기능의정의된 클레스 입니다.*/
+import java.sql.Statement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+/*데이터베이스에 접속하여 조작에 관한 기능이 정의된 클레스 입니다.*/
 public class rateDAO {
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  // jdbc 드라이버 주소
 	static final String DB_URL = "jdbc:mysql://172.19.16.1:3306/exchangerate?useSSL=false"; // DB 접속 주소
 	static final String USERNAME = "chocomin0211"; // DB ID
 	static final String PASSWORD = "min93355729@"; // DB Password
-    //DB name : exchangerate, Tablename : ex
+
+	//DB name : exchangerate, Tablename : ex
+
 	private Connection conn = null;
 	private Statement stmt = null;
-	//private ResultSet rs = null;
-
-	// rate객체를 입력받으면 객체안의 속성에 초기화된 데이터들을 데이터베이스에 인설트하는 메소드입니다.
+	
+	// rate객체를 입력받으면 객체 안의 속성에 초기화된 데이터들을 데이터베이스에 인설트하는 메소드입니다.
 	public void intertrate(rate t) {
 		
 		String query = "INSERT INTO ex"
         + " VALUE('" + t.success + "', '" + t.base + "', '" + t.date + "', '" + t.GBP + "', '" + t.JPY + "', '" + t.EUR  +"' );";
 		System.out.print("exchangerate Database in : ");
+
 		try {
 			//데이터베이스에 접속합니다.
 			Class.forName(JDBC_DRIVER);

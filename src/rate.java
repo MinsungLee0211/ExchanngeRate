@@ -5,7 +5,7 @@ public class rate {
     double GBP;
     double JPY;
     double EUR;
-	
+
     public boolean getsuccess() {
 		return success;
 	}
@@ -41,5 +41,5 @@ public class rate {
 	}
 	public void setEUR(double EUR) {
 		this.EUR = EUR;
-	}
+	} 
 }
