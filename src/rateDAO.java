@@ -1,10 +1,8 @@
-import java.sql.Statement;                            //create table ex(
-import java.sql.Connection;                           //success char(5),
-import java.sql.Driver;                               //base char(5),
-import java.sql.DriverManager;                        //date char(12),
-import java.sql.ResultSet;                            //GBP char(45),
-import java.sql.SQLException;                         //JPY char(45),
-import java.util.Enumeration;                         //EUR char(45));
+import java.sql.Statement;         
+import java.sql.Connection;                                  
+import java.sql.DriverManager;                                     
+import java.sql.SQLException;                         
+                       
                                                       
 /*데이터베이스에 접속하여 조작에 관한 기능의정의된 클레스 입니다.*/
 public class rateDAO {
@@ -17,8 +15,8 @@ public class rateDAO {
 	private Statement stmt = null;
 	//private ResultSet rs = null;
 
-	// VillageWeather객체를 입력받으면 객체안의 속성에 초기화된 데이터들을 데이터베이스에 인설트하는 메소드입니다.
-	public void intertVillageWeather(rate t) {
+	// rate객체를 입력받으면 객체안의 속성에 초기화된 데이터들을 데이터베이스에 인설트하는 메소드입니다.
+	public void intertrate(rate t) {
 		
 		String query = "INSERT INTO ex"
         + " VALUE('" + t.success + "', '" + t.base + "', '" + t.date + "', '" + t.GBP + "', '" + t.JPY + "', '" + t.EUR  +"' );";
@@ -46,3 +44,13 @@ public class rateDAO {
 	}
 
 }
+
+/*
+create table ex(
+success char(6),
+base char(5),
+date char(12),
+GBP char(45),
+JPY char(45),
+EUR char(45));
+ */

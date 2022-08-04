@@ -1,16 +1,13 @@
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
 import java.net.URL;
 
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+
 
 public class testparsing {
-	public rate getrate(String success, String base, String date) {
+	public rate getrate(String base, String date) {
        rate vl = new rate(); // 결과 데이터를 저장할 객체를 만듭니다.
        try{ //https://api.exchangeratesapi.io/v1/latest?access_key=TZsRtVEHw42GEOvnAZWMtLB4cJVFQt9&base=USD&symbols=GBP,JPY,EUR
         String urlStr = "https://api.exchangerate.host/latest?source=ecb&base=USD&symbols=GBP,JPY,EUR";
@@ -35,7 +32,11 @@ public class testparsing {
         // Top레벨 단계인 rates 키를 가지고 데이터를 파싱합니다.
         JSONObject parse_rates = (JSONObject) obj.get("rates");
 
-        System.out.println(parse_rates);
+        // 기준과 기준날짜를 rate 객체에 저장합니다.
+    		vl.base = base;
+    		vl.date = date;
+
+        System.out.println(parse_rates); //{"JPY":133.588385,"EUR":0.980969,"GBP":0.820375}
     }catch(Exception e){
         System.out.println(e.getMessage());
     }

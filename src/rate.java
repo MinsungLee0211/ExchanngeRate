@@ -1,15 +1,15 @@
 public class rate { 
-    String success;
+    boolean success;
     String base;
     String date;
     double GBP;
     double JPY;
     double EUR;
 	
-    public String getsuccess() {
+    public boolean getsuccess() {
 		return success;
 	}
-	public void setsuccess(String success) {
+	public void setsuccess(boolean success) {
 		this.success = success;
 	}
     public String getbase() {
